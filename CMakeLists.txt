@@ -24,16 +24,13 @@ if(NOT wxWidgets_POPULATED)
         add_subdirectory(${wxWidgets_SOURCE_DIR} ${wxWidgets_BINARY_DIR})
     endif()
 endif()
-# if(NOT wxWidgets_POPULATED)
-#    FetchContent_Populate(wxWidgets)
-#    add_subdirectory(${wxWidgets_SOURCE_DIR} ${wxWidgets_BUILD_DIR})
-# endif()
 
-# include(wxWidgets)
 add_executable(game_of_life
     ./src/app.cpp
-    ./src/draw_board_pane.cpp
-    ./src/gamefield.cpp
+    ./src/config/config.cpp
+    ./src/view/main_frame.cpp
+    ./src/view/draw/draw_board_pane.cpp
+    ./src/gamefield/gamefield.cpp
 )
 
 target_include_directories(game_of_life PRIVATE ${wxWidgets_SOURCE_DIR}/include)

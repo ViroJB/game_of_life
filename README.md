@@ -1,2 +1,1 @@
-Little Conveys Game of Life Thingy with GUI
-✅
+Little Conveys Game of Life Thingy with wxWidgets GUI
